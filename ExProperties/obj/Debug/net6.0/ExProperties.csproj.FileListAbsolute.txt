@@ -1,0 +1,15 @@
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\bin\Debug\net6.0\ExProperties.exe
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\bin\Debug\net6.0\ExProperties.deps.json
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\bin\Debug\net6.0\ExProperties.runtimeconfig.json
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\bin\Debug\net6.0\ExProperties.dll
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\bin\Debug\net6.0\ExProperties.pdb
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\obj\Debug\net6.0\ExProperties.csproj.AssemblyReference.cache
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\obj\Debug\net6.0\ExProperties.GeneratedMSBuildEditorConfig.editorconfig
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\obj\Debug\net6.0\ExProperties.AssemblyInfoInputs.cache
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\obj\Debug\net6.0\ExProperties.AssemblyInfo.cs
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\obj\Debug\net6.0\ExProperties.csproj.CoreCompileInputs.cache
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\obj\Debug\net6.0\ExProperties.dll
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\obj\Debug\net6.0\refint\ExProperties.dll
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\obj\Debug\net6.0\ExProperties.pdb
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\obj\Debug\net6.0\ExProperties.genruntimeconfig.cache
+C:\CSHARP\56akif_pos-Zathryt\ExProperties\obj\Debug\net6.0\ref\ExProperties.dll

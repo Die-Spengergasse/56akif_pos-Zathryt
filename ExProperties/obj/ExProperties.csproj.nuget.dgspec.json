@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CSHARP\\56akif_pos-Zathryt\\Uebung01\\Uebung01App\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "C:\\CSHARP\\56akif_pos-Zathryt\\ExProperties\\ExProperties.csproj": {}
   },
   "projects": {
-    "C:\\CSHARP\\56akif_pos-Zathryt\\Uebung01\\Uebung01App\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "C:\\CSHARP\\56akif_pos-Zathryt\\ExProperties\\ExProperties.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CSHARP\\56akif_pos-Zathryt\\Uebung01\\Uebung01App\\ConsoleApp1\\ConsoleApp1.csproj",
-        "projectName": "ConsoleApp1",
-        "projectPath": "C:\\CSHARP\\56akif_pos-Zathryt\\Uebung01\\Uebung01App\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "C:\\CSHARP\\56akif_pos-Zathryt\\ExProperties\\ExProperties.csproj",
+        "projectName": "ExProperties",
+        "projectPath": "C:\\CSHARP\\56akif_pos-Zathryt\\ExProperties\\ExProperties.csproj",
         "packagesPath": "C:\\Users\\Zathura\\.nuget\\packages\\",
-        "outputPath": "C:\\CSHARP\\56akif_pos-Zathryt\\Uebung01\\Uebung01App\\ConsoleApp1\\obj\\",
+        "outputPath": "C:\\CSHARP\\56akif_pos-Zathryt\\ExProperties\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Zathura\\AppData\\Roaming\\NuGet\\NuGet.Config",
