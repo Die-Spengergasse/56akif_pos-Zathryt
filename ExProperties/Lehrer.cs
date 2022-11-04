@@ -14,7 +14,7 @@ namespace ExProperties
         }
         decimal? _bruttogehalt = null;
 
-        public string Kuerzel { get => Zuname?.Substring(0,3).ToUpper()?? ""; }
+        public string Kuerzel { get => Zuname?[..3].ToUpper()?? ""; }
 
         public decimal Nettogehalt { get => (Bruttogehalt * 0.8M) ?? 0M; }    
         

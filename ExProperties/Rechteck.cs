@@ -28,6 +28,7 @@ namespace ExProperties
             }
         }
         int _breite;
+
         public int Flaeche { get => _flaeche;}
         int _flaeche;
 

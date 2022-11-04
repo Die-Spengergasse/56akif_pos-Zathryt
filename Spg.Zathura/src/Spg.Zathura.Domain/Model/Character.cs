@@ -14,5 +14,6 @@ namespace Spg.Zathura.Domain.Model
         public User Owner { get; set; } = new User();
         public Class Class { get; set; } = new Class();
         public List<Items> Inventory { get; set; } = new List<Items>();
+        public Items_Slot CharacterSlots { get; set; } = new Items_Slot();
     }
 }
