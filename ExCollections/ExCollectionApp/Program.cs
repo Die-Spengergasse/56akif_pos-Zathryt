@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using System.Linq;
+using System.Numerics;
 
 namespace ExCollectionApp
 {
@@ -27,6 +29,7 @@ namespace ExCollectionApp
                 s.KlasseNavigation = this;
             }           
         }
+        
     }
     class Schueler
     {
@@ -37,9 +40,30 @@ namespace ExCollectionApp
         // ein, damit der JSON Serializer das Objekt ausgeben kann.
         [JsonIgnore]
         public Klasse KlasseNavigation { get; set; } = new Klasse();
-        public int Id { get; set; }
+        public int Id { get; set; } = 0;
         public string Zuname { get; set; } = string.Empty;
         public string Vorname { get; set; } = string.Empty;
+        public string FullName
+        {
+            get 
+            {
+                return $"Full Name: {Vorname} {Zuname}" ?? string.Empty;
+            }
+        }    
+        public int? MaximaleStudiendauer
+        {
+            get { return _maximaleStudiendauer; }
+            set 
+            {
+                if(value >= 1 && value <= 7)
+                    _maximaleStudiendauer = value?? 0;
+            }
+        }
+        private int _maximaleStudiendauer;
+
+
+
+
         /// <summary>
         /// Ändert die Klassenzugehörigkeit, indem der Schüler
         /// aus der alten Klasse, die in KlasseNavigation gespeichert ist, entfernt wird.
@@ -56,6 +80,20 @@ namespace ExCollectionApp
                 k.AddSchueler(this);
             }          
         }
+        public static void KuerzesteStudiendauer(Klasse k)
+        {
+            Console.WriteLine("Min " + k.Schuelers.Min(s => s.MaximaleStudiendauer));
+            Console.WriteLine("------------------");
+            Console.WriteLine("------------------");
+            IEnumerable<Schueler> ascending = k.Schuelers.OrderBy(s => s.MaximaleStudiendauer);
+            IEnumerable<Schueler> descending = k.Schuelers.OrderByDescending(s => s.MaximaleStudiendauer);
+            foreach (Schueler schueler in k.Schuelers)
+            { Console.WriteLine(schueler.Id); }
+            Console.WriteLine("------------------");
+            Console.WriteLine("Count " + k.Schuelers.Count);
+
+        }
+
     }
 
     class Program
@@ -66,14 +104,20 @@ namespace ExCollectionApp
             klassen.Add("3AHIF", new Klasse() { Name = "3AHIF", KV = "KV1" });
             klassen.Add("3BHIF", new Klasse() { Name = "3BHIF", KV = "KV2" });
             klassen.Add("3CHIF", new Klasse() { Name = "3CHIF", KV = "KV3" });
-            klassen["3AHIF"].AddSchueler(new Schueler() { Id = 1001, Vorname = "VN1", Zuname = "ZN1" });
-            klassen["3AHIF"].AddSchueler(new Schueler() { Id = 1002, Vorname = "VN2", Zuname = "ZN2" });
-            klassen["3AHIF"].AddSchueler(new Schueler() { Id = 1003, Vorname = "VN3", Zuname = "ZN3" });
-            klassen["3BHIF"].AddSchueler(new Schueler() { Id = 1011, Vorname = "VN4", Zuname = "ZN4" });
-            klassen["3BHIF"].AddSchueler(new Schueler() { Id = 1012, Vorname = "VN5", Zuname = "ZN5" });
-            klassen["3BHIF"].AddSchueler(new Schueler() { Id = 1013, Vorname = "VN6", Zuname = "ZN6" });
+            klassen["3AHIF"].AddSchueler(new Schueler() { Id = 1001, Vorname = "VN1", Zuname = "ZN1", MaximaleStudiendauer = 5 });
+            klassen["3AHIF"].AddSchueler(new Schueler() { Id = 1002, Vorname = "VN2", Zuname = "ZN2", MaximaleStudiendauer = 2 });
+            klassen["3AHIF"].AddSchueler(new Schueler() { Id = 1003, Vorname = "VN3", Zuname = "ZN3", MaximaleStudiendauer = 3 });
+            klassen["3BHIF"].AddSchueler(new Schueler() { Id = 1011, Vorname = "VN4", Zuname = "ZN4", MaximaleStudiendauer = 1 });
+            klassen["3BHIF"].AddSchueler(new Schueler() { Id = 1012, Vorname = "VN5", Zuname = "ZN5", MaximaleStudiendauer = 7 });
+            klassen["3BHIF"].AddSchueler(new Schueler() { Id = 1013, Vorname = "VN6", Zuname = "ZN6", MaximaleStudiendauer = 2 });
+            klassen["3BHIF"].AddSchueler(new Schueler() { Id = 1021, Vorname = "VN7", Zuname = "ZN7", MaximaleStudiendauer = 7 });
+            
+            
+            
+            
 
             Schueler s = klassen["3AHIF"].Schuelers[0];
+            
             Console.WriteLine($"s sitzt in der Klasse {s.KlasseNavigation.Name} mit dem KV {s.KlasseNavigation.KV}.");
             Console.WriteLine("3AHIF vor ChangeKlasse:");
             Console.WriteLine(JsonConvert.SerializeObject(klassen["3AHIF"].Schuelers));
@@ -83,6 +127,10 @@ namespace ExCollectionApp
             Console.WriteLine("3BHIF nach ChangeKlasse:");
             Console.WriteLine(JsonConvert.SerializeObject(klassen["3BHIF"].Schuelers));
             Console.WriteLine($"s sitzt in der Klasse {s.KlasseNavigation.Name} mit dem KV {s.KlasseNavigation.KV}.");
+            Schueler.KuerzesteStudiendauer(klassen["3BHIF"]);
+            
+            
         }
+       
     }
 }
