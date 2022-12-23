@@ -12,6 +12,6 @@ namespace Spg.Zathura.Domain.Model
         public string Name { get; set; } = string.Empty;
         public int Stats { get; set; }
         public int Skill_Level { get; set; }
-        public Skillset Belongs_To { get; set; } = new Skillset();
+        public Skillset Belongs_To { get; set; } = new();
     }
 }

@@ -32,6 +32,7 @@ namespace ExProperties.App
                     result = true;
                 }
             }
+            
             Console.WriteLine($"Exception bei Länge und Breite OK: {result}");
 
             // TESTE DIE KLASSE LEHRER
@@ -56,6 +57,18 @@ namespace ExProperties.App
             result = (l2.Kuerzel == "EIF" && l3.Kuerzel == "");
             Console.WriteLine($"Kuerzel OK: {result}");
             Console.ReadLine();
+            string a = "Hello";
+            string b = "World";
+            IEnumerable<Char> c = a.Concat(b);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            foreach (var item in c)
+            {
+                Console.WriteLine(item);
+            }
+            
+
+
 
         }
     }

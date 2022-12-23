@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsable", "Parsable.csproj", "{CAD7B231-E9E2-4CC9-AC9E-77A4DF14D55D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAD7B231-E9E2-4CC9-AC9E-77A4DF14D55D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAD7B231-E9E2-4CC9-AC9E-77A4DF14D55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAD7B231-E9E2-4CC9-AC9E-77A4DF14D55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAD7B231-E9E2-4CC9-AC9E-77A4DF14D55D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C34DF650-FD62-4536-9396-6E4B8F33AA6C}
+	EndGlobalSection
+EndGlobal

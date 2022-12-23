@@ -18,7 +18,7 @@ namespace Spg.PluePos._01.Model
                 if (Url == null) 
                 { throw new ArgumentNullException("Url war NULL!"); }
                 else
-                return $"<h1>{Title}</h1><img src={Url}/>";
+                return $"<h1>{Title}</h1><img src={Url} />";
             }
         }
         public ImagePost(string title, DateTime created) : base(title, created) { }

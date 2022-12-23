@@ -8,7 +8,7 @@ namespace Spg.PluePos._01.Model
 {
     public class TextPost : Post
     {
-        public string Content { get; set; } = string.Empty;
+        public string? Content { get; set; }
         public int Length { get => Content?.Length ?? 0; }
         public override string Html
         {

@@ -29,7 +29,7 @@ namespace Spg.PluePos._01.Model
             string a = string.Empty;
             foreach (Post post in this)
             {
-                a.Concat(post.Html);
+                a += post.Html;
             };
             return a;
         }

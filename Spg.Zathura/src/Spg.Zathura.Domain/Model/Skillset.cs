@@ -10,6 +10,6 @@ namespace Spg.Zathura.Domain.Model
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
-        public Class Owner { get; set; } = new Class();
+        public Class Owner { get; set; } = default!;
     }
 }
